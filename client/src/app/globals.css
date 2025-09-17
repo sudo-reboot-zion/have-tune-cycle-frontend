@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0e1f;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gradient: linear-gradient(to left, #302D4B 0%, #0b0e1f 100%);
+  --color-primaryColor:#0b0e1f;
+  --color-secondaryColor:#302D4B;
+  --color-accentColor:#1261A0;
+  --color-tertiaryColor:#EBFFD8;
+
+
+    --font-poppins:var(--font-poppins);
+  --font-outfit:var(--font-outfit);
+  --font-poltwaski:var(--font-poltwaski);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-weight: 100;
+}
+
+
+.bg-gradient {
+  background: var(--color-gradient);
+}
+
+.custom-btn-gradient {
+  background: linear-gradient(291.65deg, #E90095 -56.07%, #00FFFF 54.51%, #03624C 162.99%);
+}
+
+.custom-btn-gradient:hover {
+  background: none !important;
+}
+
+.gradiento {
+  background: linear-gradient(291.65deg, #E90095 -56.07%, #00FFFF 54.51%, #03624C 162.99%);
+}
