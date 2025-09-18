@@ -25,7 +25,7 @@ export const tracksApi = {
         }
 
         if(trackData.bpm) {
-            formData.append('key', trackData.bpm.toString());
+            formData.append('bpm', trackData.bpm.toString());
         }
 
         if(trackData.key) {
