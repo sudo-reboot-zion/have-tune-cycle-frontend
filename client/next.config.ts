@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
-
-
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
+      // Development - Django local media files
       {
         protocol: 'http',
         hostname: '127.0.0.1',
@@ -17,11 +16,11 @@ const nextConfig: NextConfig = {
         port: '8000',
         pathname: '/media/**',
       },
-
+      // Production - Cloudinary images
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**'
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
       }
     ]
   },
@@ -34,6 +33,5 @@ const nextConfig: NextConfig = {
     ]
   },
 };
-
 
 export default nextConfig;
