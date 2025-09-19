@@ -24,7 +24,7 @@ export const registerUser = createAsyncThunk<
             const response = await authApi.registerAPI(registerData)
             return response.data
         } catch (error:unknown) {
-            return rejectWithValue(extractErrorMessage(error, 'Payment confirmation failed'));
+            return rejectWithValue(extractErrorMessage(error, 'Enter a valid information'));
         }
     }
 )
@@ -40,7 +40,7 @@ export const loginUser=createAsyncThunk<
             const response = await authApi.loginAPI(loginData)
             return response.data
         } catch (error:unknown) {
-            return rejectWithValue(extractErrorMessage(error, 'Payment confirmation failed'));
+            return rejectWithValue(extractErrorMessage(error, 'Enter a valid information'));
         }
     }
 )
